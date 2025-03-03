@@ -1,17 +1,12 @@
 #include <stdio.h>
 
 // Desafio Super Trunfo - Países
-//Super Trunfo - Cadastro de Cartas
-// Este programa permite que o usuário insira os dados de duas cartas do Super Trunfo.
-// Cada carta contém informações sobre o estado, código, nome da cidade, população, área, PIB e número de pontos turísticos.
-
-
 
 int main() {
 
 //DECLARAÇÃO DAS VARIÁVEIS PRA ARMAZENAR OS DADOS DE CADA CARTA.
 
-    char estado, nomedaCidade[20], codigodaCarta[4];
+    char estado[0], nomedaCidade[20], codigodaCarta[4];
     int  numerosdepontosTuristicos, populacao;
     float area, PIB;
 
