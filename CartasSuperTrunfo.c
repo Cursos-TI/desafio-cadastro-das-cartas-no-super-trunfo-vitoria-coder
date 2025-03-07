@@ -7,14 +7,14 @@ int main() {
 //DECLARAÇÃO DAS VARIÁVEIS CADA CARTA1.
 
     char estado1[3], nomedaCidade1[20], codigodaCarta1[4];
-    float area1, PIB1, densidadePopulacional1, PIBperCapita1, superCarta1;
+    float area1, PIB1, densidadePopulacional1, PIBperCapita1, superPoder1;
     unsigned long int populacao1;
     int numerosdepontosTuristicos1;
 
 //DECLARAÇÕES DAS VARIÁVEIS DA CARTA2.
 
     char estado2[3], nomedaCidade2[20], codigodaCarta2[4];
-    float area2, PIB2, densidadePopulacional2, PIBperCapita2, superCarta2;
+    float area2, PIB2, densidadePopulacional2, PIBperCapita2, superPoder2;
     unsigned long int populacao2;
     int numerosdepontosTuristicos2;
 
@@ -47,7 +47,7 @@ int main() {
 
     densidadePopulacional1 = (float) populacao1 / area1;
     PIBperCapita1 = PIB1 / (float) populacao1;
-    superCarta1 = (float)populacao1 + area1 + PIB1 + numerosdepontosTuristicos1 + PIBperCapita1 + ( area1/(float)populacao1);
+    superPoder1 = (float)populacao1 + area1 + PIB1 + numerosdepontosTuristicos1 + PIBperCapita1 + ( area1/(float)populacao1);
 
 
 //SAÍDAS FORMATADAS DA CARTA1
@@ -93,7 +93,7 @@ int main() {
 
     densidadePopulacional2 = (float) populacao2 / area2;
     PIBperCapita2 = PIB2 / (float) populacao2;
-    superCarta2 = (float) populacao2 + area2 + PIB2 + numerosdepontosTuristicos2 + PIBperCapita2 + (area2 / (float)populacao2);
+    superPoder2 = (float) populacao2 + area2 + PIB2 + numerosdepontosTuristicos2 + PIBperCapita2 + (area2 / (float)populacao2);
 
 
 //SAÍDAS FORMATADAS DA CARTA2
@@ -119,7 +119,7 @@ int main() {
     compPontos = (numerosdepontosTuristicos1 > numerosdepontosTuristicos2);
     compDensidade = (densidadePopulacional1 < densidadePopulacional2);
     compPIBPerCap = (PIBperCapita1 > PIBperCapita2);
-    compSuper = (superCarta1 > superCarta2);
+    compSuper = (superpoder1 > superPoder2);
 
 //RESULTADO DAS COMPARAÇÕES
 
