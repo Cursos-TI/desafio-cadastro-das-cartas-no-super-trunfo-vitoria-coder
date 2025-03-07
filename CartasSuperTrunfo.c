@@ -79,7 +79,7 @@ int main() {
     printf("Digite a população da cidade: \n");
     scanf("%lu", &populacao2);
 
-    printf("Informe a aŕea da cidade em quilômetros quadrados: \n");
+    printf("Informe a area da cidade em quilômetros quadrados: \n");
     scanf("%f", &area2);
 
     printf("Informe o PIB da cidade: \n");
@@ -107,7 +107,7 @@ int main() {
     printf("PIB : %.2f bilhões de reais\n", PIB2);
     printf("Número de Pontos Turísticos :%d\n", numerosdepontosTuristicos2);
     printf("Densidade Populacional: %.2f habitantes/km²\n", densidadePopulacional2);
-    printf("PIB per Capital: %.2f milhões de reais\n", PIBperCapita2);
+    printf("PIB per Capita: %.2f milhões de reais\n", PIBperCapita2);
 
 //COMPARAÇÕES DE ATRIBUTOS POR ATRIBUTOS
 
@@ -119,7 +119,7 @@ int main() {
     compPontos = (numerosdepontosTuristicos1 > numerosdepontosTuristicos2);
     compDensidade = (densidadePopulacional1 < densidadePopulacional2);
     compPIBPerCap = (PIBperCapita1 > PIBperCapita2);
-    compSuper = (superpoder1 > superPoder2);
+    compSuper = (superPoder1 > superPoder2);
 
 //RESULTADO DAS COMPARAÇÕES
 
