@@ -21,7 +21,7 @@ int main() {
 
 //ENTRADA DE DADOS  DA CARTA1
 
-    printf("Informe a sigla do estado: \n");
+    printf("Informe a sigla do estado: \n");        
     scanf(" %2s", estado1);
 
     printf("Digite o código da carta: \n");
@@ -67,7 +67,7 @@ int main() {
 
 //ENTRADAS DE DADOS DA CARTA2
 
-    printf("Informe a sigla do Estado: \n");
+    printf("Informe a sigla do Estado: \n");        
     scanf(" %2s", estado2);
 
     printf("Digite o código da carta: \n");
@@ -109,28 +109,17 @@ int main() {
     printf("Densidade Populacional: %.2f habitantes/km²\n", densidadePopulacional2);
     printf("PIB per Capita: %.2f milhões de reais\n", PIBperCapita2);
 
-//COMPARAÇÕES DE ATRIBUTOS POR ATRIBUTOS
+//COMPARAÇÃO ENTRE DUAS CARTAS
 
-    int compPop, compArea, compPIB, compPIBPerCap, compPontos, compDensidade, compSuper;
+    if(populacao1 > populacao2){
+        printf("Comparação de população:\nCarta 1 - %s (%s): %lu habitantes\nCarta 2 - %s (%s): %lu habitantes\nResultado: Carta 1 venceu!!!\n ",
+            nomedaCidade1, estado1, populacao1, nomedaCidade2, estado2, populacao2);
+    }else{
+        printf("Comparação de população:\nCarta 1 - %s (%s): %lu habitantes\nCarta 2 - %s (%s): %lu habitantes\nResultado: Carta 2 venceu!!!\n", 
+            nomedaCidade1, estado1, populacao1, nomedaCidade2, estado2, populacao2);
+    }
 
-    compPop = (populacao1 > populacao2);
-    compArea = (area1 > area2);
-    compPIB = (PIB1 > PIB2);
-    compPontos = (numerosdepontosTuristicos1 > numerosdepontosTuristicos2);
-    compDensidade = (densidadePopulacional1 < densidadePopulacional2);
-    compPIBPerCap = (PIBperCapita1 > PIBperCapita2);
-    compSuper = (superPoder1 > superPoder2);
 
-//RESULTADO DAS COMPARAÇÕES
-
-    printf("\n === Comparação de Cartas=== \n");
-    printf("População: %s (%d)\n",(compPop ? "Carta 1 venceu": "Carta 2 venceu"), compPop);
-    printf("Aréa: %s (%d)\n",(compArea ? "Carta 1 venceu": "Carta 2 venceu"), compArea);
-    printf("PIB: %s (%d)\n", (compPIB ? "Carta 1 venceu": "Carta 2 venceu"), compPIB);
-    printf("Pontos turísticos: %s (%d)\n", (compPontos ? "Carta 1 venceu": "Carta 2 venceu"), compPontos);
-    printf("Densidade Populacional: %s (%d)\n",(compDensidade ? "Carta 1 venceu": "Carta 2 venceu"), compDensidade);
-    printf("PIB per Capital: %s (%d)\n",(compPIBPerCap ? "Carta 1 venceu": "Carta 2 venceu"), compPIBPerCap);
-    printf("Super poder: %s (%d)\n",(compSuper ? "Carta 1 venceu": "Carta 2 venceu"), compSuper);
 
     return 0;
 }
