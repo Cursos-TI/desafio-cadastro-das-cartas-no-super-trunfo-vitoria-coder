@@ -11,7 +11,7 @@ int main() {
     unsigned long int populacao1;
     int numerosdepontosTuristicos1;
 
-//DECLARAÇÕES DAS VARIÁVEIS DA CARTA2.
+//DECLARAÇÕES DAS VARIÁVEIS DA CARTA2.      
 
     char estado2[3], nomedaCidade2[20], codigodaCarta2[4];
     float area2, PIB2, densidadePopulacional2, PIBperCapita2, superPoder2;
@@ -109,15 +109,97 @@ int main() {
     printf("Densidade Populacional: %.2f habitantes/km²\n", densidadePopulacional2);
     printf("PIB per Capita: %.2f milhões de reais\n", PIBperCapita2);
 
-//COMPARAÇÃO ENTRE DUAS CARTAS
+//MENU INTERATIVO
+int opcao;
 
+printf("\nEscolha o atributo para comparação:\n");
+printf("1. População\n");
+printf("2. Área\n");
+printf("3. PIB\n");
+printf("4. Números de pontos turísticos\n");
+printf("5. Densidade Populacional\n");
+
+printf("Digite a opção desejada: ");
+scanf("%d", &opcao);
+switch(opcao){
+
+    //comparação do atributo população das cartas 1 e 2;
+    case 1:
+    printf("Comparação da População:\n");
+    printf("Carta 1 -  %s (%s): %lu habitantes\n", nomedaCidade1, estado1, populacao1);
+    printf("Carta 2 - %s (%s): %lu habitantes\n", nomedaCidade2, estado2, populacao2);
     if(populacao1 > populacao2){
-        printf("Comparação de população:\nCarta 1 - %s (%s): %lu habitantes\nCarta 2 - %s (%s): %lu habitantes\nResultado: Carta 1 venceu!!!\n ",
-            nomedaCidade1, estado1, populacao1, nomedaCidade2, estado2, populacao2);
+        printf("Carta 1 venceu!! A cidade com maior população é %s.\n", nomedaCidade1);
+    }else if(populacao1 < populacao2){
+        printf("Carta 2 venceu!! A cidade com maior população é %s.\n", nomedaCidade2);
     }else{
-        printf("Comparação de população:\nCarta 1 - %s (%s): %lu habitantes\nCarta 2 - %s (%s): %lu habitantes\nResultado: Carta 2 venceu!!!\n", 
-            nomedaCidade1, estado1, populacao1, nomedaCidade2, estado2, populacao2);
+        printf("Empate! Ambas as cartas têm a ");
     }
+    break;
+
+    //comparação do atributo área das cartas 1 e 2;
+    case 2: 
+    printf("Comparação da Área:\n");
+    printf("Carta 1 - %s (%s): %.2f km\n", nomedaCidade1, estado1, area1);
+    printf("Carta 2 - %s (%s): %.2f km\n", nomedaCidade2, estado2, area2);
+    if(area1 > area2){
+        printf("Carta 1 venceu!!A cidade com maior área é %s.\n", nomedaCidade1);
+    }else if(area1 < area2){
+        printf("Carta 2 venceu!!A cidade com maior área é %s\n", nomedaCidade2);
+    }else{
+        printf("Empate! Ambas têm a mesma área.\n");
+    }
+    break;
+
+    //comparação do atributo PIB das cartas 1 e 2;
+    case 3:
+    printf("Comparação do PIB:\n");
+    printf("Carta 1 - %s (%s): %.2f bilhões\n", nomedaCidade1, estado1, PIB1);
+    printf("Carta 2 - %s (%s): %.2f bilhões\n", nomedaCidade2, estado2, PIB2);
+    if(PIB1 > PIB2){
+        printf("Carta 1 venceu!!A cidade com maior PIB é %s.\n", nomedaCidade1);
+    }else if(PIB1 < PIB2){
+        printf("Carta 2 venceu!!A cidade com maior PIB é %s.\n", nomedaCidade2);
+    }else{
+        printf("Empate!! Ambas têm o mesmo PIB.\n");
+    }
+    break;
+
+    //comparação do atributo de pontos turísticos das cartas 1 e 2;
+    case 4:
+    printf("Comparação dos Números de pontos turísticos:\n");
+    printf("Carta 1 - %s (%s): %d pontos turísticos\n", nomedaCidade1, estado1, numerosdepontosTuristicos1);
+    printf("Carta 2 - %s (%s): %d pontos turísticos\n", nomedaCidade2, estado2, numerosdepontosTuristicos2);
+    if(numerosdepontosTuristicos1 > numerosdepontosTuristicos2){
+        printf("Carta 1 venceu!!A cidade com maior ponto turísto é %s.\n", nomedaCidade1);
+    }else if(numerosdepontosTuristicos1 < numerosdepontosTuristicos2){
+        printf("Carta 2 venceu!!A cidade com maior ponto turístico é %s.\n", nomedaCidade2);
+    }else{
+        printf("Empate!!Ambas as têm a mesma quantidade de pontos turísticos.\n");
+    }
+    break;
+
+    //comparação do atributo de densidade populacional das cartas 1 e 2;
+    case 5:
+    printf("Comparação da Densidade Populacional:\n");
+    printf("Carta 1 - %.2f habitantes/km\n", nomedaCidade1, estado1, densidadePopulacional1);
+    printf("Carta 2 - %.2f habitantes/km\n", nomedaCidade2, estado2, densidadePopulacional2);
+    if(densidadePopulacional1 < densidadePopulacional2){
+        printf("Carta 1 venceu!!A cidade com menor densidade populacional é %s.\n");
+    }else if(densidadePopulacional1 > densidadePopulacional2){
+        printf("Carta 2 venceu!!A cidade com menor densidade populacional é %s.\n");
+    }else{
+        printf("Empate!! Ambas as cidades têm a mesma densidade populacional.\n");
+    }
+    break;
+    default:
+    printf("Opção inválida.!");
+
+}
+
+
+
+
 
 
 
